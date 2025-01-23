@@ -1,5 +1,5 @@
 library(readr)
-ec <- read_csv("Downloads/data_economist.csv")
+ec <- read_csv("/Users/zyeon/Downloads/data_economist.csv")
 head(ec)
 str(ec)
 levels(ec$Region)
@@ -26,10 +26,10 @@ ggplot(ec,aes(x=CPI,y=HDI,color=Region))+
 
 ggplot(ec,aes(x=CPI,y=HDI,color=Region))+
   geom_point(shape=1,size=3,stroke=0.8)+
-  geom_smooth(method="lm",formula=y~poly(x,2),se=F,size=1.1,color="black")
+  geom_smooth(method="lm",formula=y~poly(x,2),se=F,size=1.1,color="red")
 
 p <- ggplot(ec,aes(x=CPI,y=HDI,color=Region))+
-  geom_smooth(method="lm",formula=y~poly(x,2),se=F,color="azure4",size=0.8)+
+  geom_smooth(method="lm",formula=y~poly(x,2),se=F,color="red",size=0.8)+
   geom_point(shape=1,size=3,stroke=0.8)
 p
 
